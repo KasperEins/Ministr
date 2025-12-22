@@ -301,7 +301,7 @@ elif selected_module == "Sector Analytics":
             st.plotly_chart(fig_emp, use_container_width=True)
             
         with col2:
-        st.subheader(f"Economic Context ({current_year})")
+            st.subheader(f"Economic Context ({current_year})")
             st.metric("Sector Unemployment Rate", f"{econ_data.get('unemployment_rate_culture', 'N/A')}%", "-0.2% vs Nat. Avg (2.7%)")
             st.metric("Inflation Rate", f"{econ_data.get('inflation_rate_2025', 'N/A')}%", "Stabilized Target (2.4%)")
             st.warning("Action Required: Low wages are driving talent to commercial sectors.")
