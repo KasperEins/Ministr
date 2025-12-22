@@ -81,18 +81,42 @@ if selected_module == "Overview: KPI Scorecard":
                 delta=f"0.05% vs {prev_year}"
             )
             
+        # Calculate dynamic deltas
+        try:
+            hist = econ_data.get("historical_growth", {})
+            
+            # Resources Delta
+            if "resources" in hist and len(hist["resources"]) >= 2:
+                res_curr = hist["resources"][-1]
+                res_prev = hist["resources"][-2]
+                res_growth = round(((res_curr - res_prev) / res_prev) * 100, 1)
+            else:
+                res_growth = econ_data.get('financial_resources_growth', 0)
+
+            # Wage Delta
+            if "avg_wage_culture" in hist and len(hist["avg_wage_culture"]) >= 2:
+                wage_curr = hist["avg_wage_culture"][-1]
+                wage_prev = hist["avg_wage_culture"][-2]
+                wage_growth = round(((wage_curr - wage_prev) / wage_prev) * 100, 1)
+            else:
+                wage_growth = 9.8 
+
+        except:
+            res_growth = 5.0
+            wage_growth = 9.8
+
         with col2:
             st.metric(
                 label="Total Fin. Resources (CZK)",
                 value=f"{econ_data.get('total_financial_resources', 'N/A')} B",
-                delta=f"{econ_data.get('financial_resources_growth', 'N/A')}% YoY"
+                delta=f"{res_growth}% YoY"
             )
             
         with col3:
             st.metric(
                 label="Avg Monthly Wage (Culture)",
                 value=f"{econ_data.get('avg_monthly_wage', 'N/A')} CZK",
-                delta="+8.5% YoY"
+                delta=f"+{wage_growth}% YoY"
             )
 
 # ... (chart) ...

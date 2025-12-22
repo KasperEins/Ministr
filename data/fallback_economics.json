@@ -1,49 +1,50 @@
 {
     "culture_share_gdp": 1.51,
-    "total_financial_resources": 343.7,
-    "financial_resources_growth": 5.0,
-    "avg_monthly_wage": 39208,
+    "total_financial_resources": 368.5,
+    "financial_resources_growth": 7.2,
+    "avg_monthly_wage": 43050,
     "inflation_rate_2024": 2.8,
-    "unemployment_rate_culture": 2.1,
-    "years": [
-        2020,
-        2021,
-        2022,
-        2023,
-        2024,
-        2025
-    ],
-    "resources": [
-        300.0,
-        310.5,
-        325.2,
-        327.4,
-        343.7,
-        360.0
-    ],
-    "avg_wage_culture": [
-        32500,
-        34100,
-        35800,
-        37500,
-        39208,
-        41000
-    ],
-    "avg_wage_national": [
-        35611,
-        37839,
-        40353,
-        43341,
-        46012,
-        48500
-    ],
-    "employment_k": [
-        82.5,
-        81.2,
-        83.5,
-        84.8,
-        85.4,
-        86.2
-    ]
-}
+    "unemployment_rate_culture": 1.8,
+    "historical_growth": {
+        "years": [
+            2020,
+            2021,
+            2022,
+            2023,
+            2024,
+            2025
+        ],
+        "resources": [
+            300.0,
+            310.5,
+            325.2,
+            327.4,
+            343.7,
+            368.5
+        ],
+        "avg_wage_culture": [
+            32500,
+            34100,
+            35800,
+            37500,
+            39208,
+            43050
+        ],
+        "avg_wage_national": [
+            35611,
+            37839,
+            40353,
+            43341,
+            46012,
+            48295
+        ],
+        "employment_k": [
+            82.5,
+            81.2,
+            83.5,
+            84.8,
+            85.4,
+            87.1
+        ]
+    }
 }
