@@ -45,7 +45,7 @@ loader = DataLoader()
 
 # --- Sidebar ---
 with st.sidebar:
-    st.title("🇨🇿 Ministr Kultů")
+    st.title("🇨🇿 Ministr Kultury")
     st.markdown("---")
     
     menu_options = [
@@ -59,7 +59,6 @@ with st.sidebar:
     selected_module = st.radio("Navigation", menu_options)
     
     st.markdown("---")
-    st.caption(f"Last Updated: {loader.get_last_updated()}")
     st.caption("Data Sources: NKOD, CZSO, NIPOS")
 
 # --- Main Content ---
